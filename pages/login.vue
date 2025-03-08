@@ -1,4 +1,6 @@
 <template>
+    <Header />
+    
     <div class="min-h-100 p-0 p-sm-6 d-flex align-items-stretch">
         <div class="card w-25x flex-grow-1 flex-sm-grow-0 m-sm-auto">
             <!-- Card Body -->
@@ -22,8 +24,9 @@
     </div>
 </template>
 
-
 <script setup lang="js">
+  import Header from "~/components/global/Header.vue";
+
 useHead({
     title: "Login",
     meta: [

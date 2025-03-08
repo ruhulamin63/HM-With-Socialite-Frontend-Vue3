@@ -1,24 +1,29 @@
-# hotel-frontend
+# Hotel Management-System-Frontend
+I'm implement to authentication system with social login (Google) and manage access tokens and refresh tokens properly for a hotel management using Nuxt.js.
 
-## Project setup
+## Required version
+```bash
+Node version 18.12 or more <=
+PHP version "^8.2" or more <=
 ```
+
+## Step 1
+```bash
+git clone https://github.com/ruhulamin63/HM-With-Socialite-Frontend-Vue3.git
+```
+
+## Step 2
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+## Step 3
+```bash
+npm run dev
 ```
 
-### Lints and fixes files
+## Step 4
+```bash
+http://localhost:3000
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### =========== Enjoy coding ===============

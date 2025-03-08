@@ -40,7 +40,7 @@ export default defineNuxtPlugin(() => {
       localStorage.removeItem("AUTH_TOKEN");
       localStorage.removeItem("refreshToken");
 
-      return navigateTo("/login");
+      return navigateTo("/");
     }
   }
 

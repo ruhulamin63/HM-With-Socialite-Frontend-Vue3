@@ -28,12 +28,18 @@
                   <Table :columns="table_header" :entities="entities" @getData="getData">
                     <template v-slot:column_action="{ entity }">
                       <td>
-                        <a class="mr-1 badge bg-info" href="javascript:"
+                        <NuxtLink title="View" :to="'/hotels/details-' + entity.id" class="mr-1 badge bg-info" >
+                          <i class="fas fa-eye"></i>
+                        </NuxtLink>
+
+                        &nbsp;
+
+                        <a title="Edit" class="mr-1 badge bg-info" href="javascript:"
                           @click="openEditModal(entity)"><i class="fas fa-edit"></i></a>
 
                         &nbsp;
 
-                        <a class="ml-1 badge bg-danger"
+                        <a title="Delete" class="ml-1 badge bg-danger"
                           href="javascript:" @click="deleteHotel(entity.id)"><i class="fas fa-trash"></i></a>
                       </td>
                     </template>
@@ -66,14 +72,14 @@ const apiUrl = config.public.apiBaseUrl;
 const table_header = ref([
   { label: 'Sl No', field: 'sl' },
   { label: 'Name', field: 'name' },
-  { label: 'Address', field: 'address' },
   { label: 'Cost', field: 'cost_per_night' },
   { label: 'Room', field: 'available_rooms' },
-  { label: 'Rating', field: 'rating' }
+  { label: 'Rating', field: 'rating' },
+  { label: 'Address', field: 'address' }
 ]);
 
 const entities = ref([]);
-const getData = async (params = { url: null, filter: { rows: 8 } }) => {
+const getData = async (params = { url: null, filter: { rows: 10 } }) => {
   try {
     let url = apiUrl + 'hotels';
 
